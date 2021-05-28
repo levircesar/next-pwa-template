@@ -4,8 +4,8 @@
     "display": "fullscreen",
     "scope": "/",
     "start_url": "/",
-    "name": "Next PWA",
-    "short_name": "nextpwa",
+    "name": "Next PWA Template",
+    "short_name": "nextpwatemplate",
     "icons": [
         {
             "src": "/icon-192x192.png",
