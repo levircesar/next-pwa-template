@@ -8,7 +8,6 @@ import Document, {
   NextScript
 } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
-import theme from '../lib/theme'
 
 export default class MyDocument extends Document {
   static async getInitialProps(
@@ -45,8 +44,6 @@ export default class MyDocument extends Document {
     return (
       <Html lang="pt">
         <Head>
-          {/* PWA primary color */}
-          <meta name="theme-color" content={theme.palette.primary.main} />
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
@@ -67,16 +64,19 @@ export default class MyDocument extends Document {
           />
           <meta name="robots" content="index,follow" />
           <meta name="format-detection" content="telephone=no" />
-          <meta property="og:title" content="Oque eu mando?" />
-          <meta property="og:site_name" content="Oque eu mando?" />
+          <meta property="og:title" content="next-template" />
+          <meta property="og:site_name" content="next-template" />
           <meta
             property="og:description"
             content="Oque eu mando é um app que ajuda as pessoas a interagir sugerindo assuntos e cantadas para você usar"
           />
-          <meta property="og:url" content="https://oque-eu-mando.vercel.app" />
+          <meta
+            property="og:url"
+            content="https://next-pwa-template-rho.vercel.app"
+          />
           <meta
             property="og:image"
-            content="https://oque-eu-mando.vercel.app/favicon.png"
+            content="https://next-pwa-template-rho.vercel.app/favicon.ico"
           />
           <meta property="og:image:type" content="image/png" />
 
@@ -90,14 +90,14 @@ export default class MyDocument extends Document {
           <meta name="description" content="Best PWA App in the world" />
           <meta name="format-detection" content="telephone=no" />
           <meta name="mobile-web-app-capable" content="yes" />
-          <meta name="msapplication-TileColor" content="#fd267d" />
+          <meta name="msapplication-TileColor" content="#232ed1" />
           <meta name="msapplication-tap-highlight" content="no" />
-          <meta name="theme-color" content="#fd267d" />
+          <meta name="theme-color" content="#232ed1" />
 
           <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
           <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico" />
           <link rel="manifest" href="/manifest.json" />
-          <link rel="mask-icon" href="/favicon.ico" color="#fd267d" />
+          <link rel="mask-icon" href="/favicon.ico" color="#232ed1" />
           <link rel="shortcut icon" href="/favicon.ico" />
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:url" content="" />
@@ -113,7 +113,7 @@ export default class MyDocument extends Document {
           <meta property="og:description" content="Best PWA App in the world" />
           <meta property="og:site_name" content="PWA App" />
           <meta property="og:url" content="" />
-          <meta property="og:image" content="/favicon.png" />
+          <meta property="og:image" content="/favicon.ico" />
         </Head>
         <body>
           <Main />

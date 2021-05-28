@@ -4,8 +4,8 @@
     "display": "fullscreen",
     "scope": "/",
     "start_url": "/",
-    "name": "Next PWA Template",
-    "short_name": "next-template",
+    "name": "Next-PWA-Template",
+    "short_name": "nexttemplate",
     "icons": [
         {
             "src": "/vercel.svg",
