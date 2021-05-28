@@ -25,42 +25,27 @@ export default function Profile({ repos }: HomeProps) {
   return (
     <div className={styles.wrapper}>
       <Head>
-        <title>Levir Lemos | Website</title>
+        <title>Template | Website</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
       <main>
         <div className={styles.content}>
           <section>
-            <h2>
-              Seja muito bem vindo(a)! Fiz esse site usando meus conhecimentos
-              em HTML, CSS, Javascript. Sinta-se avontade para navegar xD
-            </h2>
+            <h2>Template Projeto Next-PWA</h2>
 
+            <p>Esse site conta com a tecnologia NextJs,PWA,styled-components</p>
             <p>
-              Esse site conta com a tecnologia recente do NextJS e seu script
-              base foi gerado a partir do comando
+              Neste template você encontrarar modelos de
+              páginas,componentes,requisições a api e requisições ao servidor do
+              Next
             </p>
 
+            <h3>Sobre o Autor:</h3>
             <p>
-              Caso queira copiar este projeto, adicionei um repositório público
-              para ajudar iniciantes na criação de projetos com next. Caso tenha
-              o github CLI, o projeto pode ser clonado em
+              Me chamo Levir César, possuo {reposNumber} projetos públicos no
+              Github
             </p>
-
-            <p>
-              Graduando em Engenharia de Computação na Universidade Federal do
-              Ceara (UFC) . A paixão por tecnologia me levou a ingressar em 2017
-              na faculdade , onde aprendi muito com pessoas altamente
-              capacitadas.
-            </p>
-
-            <p>
-              Atuo como desenvolvedor Fullstack com ênfase em desenvolvimento
-              Front-End. Especialista em criação de Landing Pages, Sites
-              Institucionais e E-commerce.
-            </p>
-            <p>Possuo {reposNumber} projetos públicos no Github</p>
 
             <h2 style={{ margin: '10px', textAlign: 'center' }}>
               Apoie esse projeto com qualquer valor
@@ -90,6 +75,11 @@ export default function Profile({ repos }: HomeProps) {
                 height="1"
               />
             </form>
+            <p>
+              Obs: Caso apareça um erro no console, é referente a estilização
+              desse botão do paypal, mas não interfere na aplicação.Pode ser
+              substituido pelo seu botão de donate do paypal
+            </p>
 
             <p
               style={{

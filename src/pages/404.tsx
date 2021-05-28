@@ -5,7 +5,7 @@ export default function error() {
   return (
     <Container>
       <Head>
-        <title>Levir Lemos | Website</title>
+        <title>Template | Website</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div>

@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react'
+import React, { useState, useContext } from 'react'
 import { Button, Overlay, Desktop, Mobile, NavBar, NavMenu } from './NewSideBar'
 import Link from 'next/link'
 import Switch from 'react-switch'
@@ -24,16 +24,10 @@ interface Props {
 
 const SideBarComponent: React.FC<Props> = ({ toggleTheme }) => {
   const [sidebar, setSidebar] = useState(false)
-  const [currentAge, setcurrentAge] = useState(0)
   const { colors, title } = useContext(ThemeContext)
 
   const showSidebar = () => setSidebar(!sidebar)
 
-  useEffect(() => {
-    const day1 = Number(new Date().getFullYear())
-    const day2 = 1999
-    setcurrentAge(day1 - day2)
-  }, [])
   return (
     <>
       {sidebar && <Overlay onClick={showSidebar}></Overlay>}
@@ -45,7 +39,7 @@ const SideBarComponent: React.FC<Props> = ({ toggleTheme }) => {
           <div className={styles.boxImg}>
             <Link href="/">
               <h2>
-                <span>&lt;</span> Levir Lemos : {currentAge} <span>/&gt;</span>
+                <span>&lt;</span> NavBar<span>/&gt;</span>
               </h2>
             </Link>
           </div>
