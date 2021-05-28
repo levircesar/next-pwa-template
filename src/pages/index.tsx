@@ -44,7 +44,7 @@ export default function Profile({ repos }: HomeProps) {
             <h3>Sobre o Autor:</h3>
             <p>
               Me chamo Levir César, possuo {reposNumber} projetos públicos no
-              Github
+              <a href="https://github.com/levircesar">Meu Github</a>
             </p>
 
             <h2 style={{ margin: '10px', textAlign: 'center' }}>
@@ -75,11 +75,6 @@ export default function Profile({ repos }: HomeProps) {
                 height="1"
               />
             </form>
-            <p>
-              Obs: Caso apareça um erro no console, é referente a estilização
-              desse botão do paypal, mas não interfere na aplicação.Pode ser
-              substituido pelo seu botão de donate do paypal
-            </p>
 
             <p
               style={{
