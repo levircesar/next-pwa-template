@@ -1,6 +1,10 @@
 {
-  "name": "next-template",
+  "name": "next-pwa-template",
   "version": "1.0.0",
+  "author": {
+    "name": "Levir Cesar",
+    "email": "levirlemos@gmail.com"
+  },
   "private": true,
   "scripts": {
     "pwa": "next pwa",
