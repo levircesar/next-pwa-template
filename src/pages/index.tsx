@@ -1,9 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
-import styles from '../styles/profile.module.scss'
 import format from 'date-fns/format'
 import ptBR from 'date-fns/locale/pt-BR'
-
+import { Wrapper } from '../styles/index'
 import { GetStaticProps } from 'next'
 import { api } from '../services/api'
 
@@ -16,21 +15,21 @@ type HomeProps = {
   repos: Repositorios[]
 }
 
-export default function Profile({ repos }: HomeProps) {
+export default function Home({ repos }: HomeProps) {
   const reposNumber = repos.length
   const currentDate = format(new Date(), 'EEEEEE , d MMMM Y', {
     locale: ptBR
   })
 
   return (
-    <div className={styles.wrapper}>
+    <Wrapper>
       <Head>
         <title>Template | Website</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
       <main>
-        <div className={styles.content}>
+        <div className="content">
           <section>
             <h2>Template Projeto Next-PWA</h2>
 
@@ -44,7 +43,7 @@ export default function Profile({ repos }: HomeProps) {
             <h3>Sobre o Autor:</h3>
             <p>
               Me chamo Levir César, possuo {reposNumber} projetos públicos no
-              <a href="https://github.com/levircesar">Meu Github</a>
+              <a href="https://github.com/levircesar"> Meu Github</a>
             </p>
 
             <h2 style={{ margin: '10px', textAlign: 'center' }}>
@@ -87,7 +86,7 @@ export default function Profile({ repos }: HomeProps) {
           </section>
         </div>
       </main>
-    </div>
+    </Wrapper>
   )
 }
 

@@ -52,8 +52,8 @@ export const BoxImg = styled.div`
   h2 {
     padding: 1rem;
     cursor: pointer;
-    margin-top: 1rem;
     transition: 0.5s;
+    color: white;
 
     span {
       opacity: 0;
@@ -105,7 +105,7 @@ export const Button = styled.button`
   width: 70px;
   padding: 0.5rem;
   margin-right: 2px;
-  background: ${props => props.theme.colors.buttonHover};
+  background: ${props => props.theme.colors.buttonColor};
   border: 0;
   transition: 0.2s;
 
@@ -113,7 +113,7 @@ export const Button = styled.button`
   font-weight: bold;
 
   &:hover {
-    background-color: ${props => props.theme.colors.buttonColor};
+    background-color: ${props => props.theme.colors.buttonHover};
   }
 `
 export const Mobile = styled.div`
@@ -133,19 +133,93 @@ export const NavBar = styled.div`
 `
 
 export const NavMenu = styled.div`
-  background-color: ${props => props.theme.colors.buttonColor};
-  width: 250px;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  right: -100%;
-  transition: 850ms;
+  .navbar {
+    background-color: ${props => props.theme.colors.buttonColor};
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: -100%;
+    transition: 850ms;
+  }
 
   .active {
     right: 0;
     transition: 300ms;
   }
+`
+
+export const MenuBars = styled.button`
+  font-size: 2rem;
+  background: none;
+  color: white;
+  border: 0;
+  padding: 1rem;
+`
+
+export const NavMenuItems = styled.ul`
+  width: 100%;
+`
+
+export const NavText = styled.li`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0 8px 16px;
+  list-style: none;
+  height: 60px;
+
+  button {
+    border: 0;
+    text-decoration: none;
+    cursor: pointer;
+    color: #f5f5f5;
+    background-color: ${props => props.theme.colors.buttonColor};
+    font-size: 18px;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    border-radius: 4px;
+  }
+
+  button:hover {
+    cursor: pointer;
+    background-color: ${props => props.theme.colors.buttonHover};
+  }
+
+  a {
+    border: 0;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    color: #f5f5f5;
+    background-color: ${props => props.theme.colors.buttonColor};
+    font-size: 18px;
+    justify-content: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    border-radius: 4px;
+  }
+
+  a:hover {
+    cursor: pointer;
+    background-color: ${props => props.theme.colors.buttonHover};
+  }
+`
+
+export const NavBarToogle = styled.li`
+  background-color: ${props => props.theme.colors.buttonColor};
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 2rem;
 `

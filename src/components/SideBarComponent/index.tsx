@@ -1,5 +1,17 @@
 import React, { useState, useContext } from 'react'
-import { Button, Overlay, Desktop, Mobile, NavBar, NavMenu } from './NewSideBar'
+import {
+  Button,
+  Overlay,
+  Desktop,
+  Mobile,
+  NavBar,
+  NavMenu,
+  MenuBars,
+  NavMenuItems,
+  NavText,
+  NavBarToogle,
+  BoxImg
+} from './NewSideBar'
 import Link from 'next/link'
 import Switch from 'react-switch'
 import { ThemeContext } from 'styled-components'
@@ -16,7 +28,6 @@ import {
 } from 'react-icons/fa'
 
 import { SideBarData } from '../../utils/SideBarData'
-import styles from './styles.module.scss'
 
 interface Props {
   toggleTheme?(): void
@@ -30,20 +41,20 @@ const SideBarComponent: React.FC<Props> = ({ toggleTheme }) => {
 
   return (
     <>
-      {sidebar && <Overlay onClick={showSidebar}></Overlay>}
+      {sidebar && <Overlay onClick={showSidebar} />}
 
       <Desktop></Desktop>
 
       <Mobile>
         <NavBar>
-          <div className={styles.boxImg}>
+          <BoxImg>
             <Link href="/">
               <h2>
-                <span>&lt;</span> NavBar<span>/&gt;</span>
+                <span>&lt;</span> Menu<span>/&gt;</span>
               </h2>
             </Link>
-          </div>
-          <button className={styles.menuBars}>
+          </BoxImg>
+          <MenuBars>
             {title === 'light' ? (
               <FaSun onClick={toggleTheme} />
             ) : (
@@ -61,29 +72,26 @@ const SideBarComponent: React.FC<Props> = ({ toggleTheme }) => {
               onColor={colors.backgroundSecondary}
             />
             <FaBars style={{ marginLeft: '20px' }} onClick={showSidebar} />
-          </button>
+          </MenuBars>
         </NavBar>
         <NavMenu>
-          <nav
-            className={
-              sidebar ? `${styles.navMenu} ${styles.active}` : styles.navMenu
-            }>
-            <ul className={styles.navMenuItems}>
-              <li className={styles.navBarToogle}>
-                <button className={styles.menuBars}>
+          <nav className={sidebar ? `navbar active` : `navbar`}>
+            <NavMenuItems>
+              <NavBarToogle>
+                <MenuBars>
                   <FaTimes onClick={showSidebar} />
-                </button>
-              </li>
+                </MenuBars>
+              </NavBarToogle>
               {SideBarData.map((item, index) => {
                 return (
-                  <li key={index} className={styles.navText}>
+                  <NavText key={index}>
                     <Link key={index} href={item.path}>
                       <Button onClick={showSidebar}>{item.title}</Button>
                     </Link>
-                  </li>
+                  </NavText>
                 )
               })}
-              <li className={styles.navText}>
+              <NavText>
                 <a href="https://www.instagram.com/levirlms/">
                   <FaInstagram />
                 </a>
@@ -96,8 +104,8 @@ const SideBarComponent: React.FC<Props> = ({ toggleTheme }) => {
                 <a href="https://github.com/levircesar">
                   <FaGithub />
                 </a>
-              </li>
-            </ul>
+              </NavText>
+            </NavMenuItems>
           </nav>
         </NavMenu>
       </Mobile>

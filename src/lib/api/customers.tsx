@@ -1,9 +1,9 @@
 const rows = [
-  { id: 1, name: 'Luke Skywalker', email: 'luke.skywalker@starwars.com' },
-  { id: 2, name: 'R2-D2', email: 'r2d2@starwars.com' },
-  { id: 3, name: 'Darth Vader', email: 'darth.vader@starwars.com' },
-  { id: 4, name: 'Leia Organa', email: 'leia.organa@starwars.com' },
-  { id: 5, name: 'Owen Lars', email: 'owen.lars@starwars.com' }
+  { id: 1, name: 'Ronaldo', email: 'ronaldo@email.com' },
+  { id: 2, name: 'Arthur', email: 'arthur@email.com' },
+  { id: 3, name: 'Jessica', email: 'jessica@email.com' },
+  { id: 4, name: 'Charles', email: 'charles@email.com' },
+  { id: 5, name: 'Livia', email: 'livia@email.com' }
 ]
 
 export const getCustomers = (): Promise<
